@@ -1,0 +1,34 @@
+{
+  "name": "Your Bot Name",
+  "description": "Telegram bot that automatically deletes messages, except for videos (MKV, MP4), in every chat.",
+  "repository": "https://github.com/YourUsername/YourRepository",
+  "keywords": ["telegram", "bot", "python"],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Token for your Telegram bot"
+    },
+    "API_ID": {
+      "description": "Telegram API ID"
+    },
+    "API_HASH": {
+      "description": "Telegram API hash"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "scripts": {
+    "start": "python bot.py"
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ]
+}
