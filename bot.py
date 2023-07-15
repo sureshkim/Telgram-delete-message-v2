@@ -1,13 +1,13 @@
 import os
-from telegram import Update, Message
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackContext, Filters
 from telethon import TelegramClient
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.types import Channel
 
 def start(update: Update, context: CallbackContext) -> None:
     """Start command handler."""
-    update.message.reply_text('Bot started.')
+    update.message.reply_text('Bot started. I will automatically delete messages in every chat where I am added, except for videos (MKV, MP4).')
 
 def handle_message(update: Update, context: CallbackContext) -> None:
     """Handle incoming messages."""
@@ -42,3 +42,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+    
