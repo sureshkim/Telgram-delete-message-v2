@@ -13,11 +13,13 @@ def handle_text_message(update: Update, context: CallbackContext) -> None:
     """Handle incoming text messages."""
     message = update.message
     # Process and handle text messages here
+    pass
 
 def handle_media_message(update: Update, context: CallbackContext) -> None:
     """Handle incoming media messages (photos, videos, etc.)."""
     message = update.message
     # Process and handle media messages here
+    pass
 
 def handle_message(update: Update, context: CallbackContext) -> None:
     """Handle incoming messages (except commands)."""
